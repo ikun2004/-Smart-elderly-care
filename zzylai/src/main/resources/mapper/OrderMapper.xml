@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.yangeit.mapper.OrderMapper">
+    <resultMap id="BaseResultMap" type="cn.yangeit.pojo.Order">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="tradingOrderNo" column="trading_order_no" jdbcType="BIGINT"/>
+        <result property="paymentStatus" column="payment_status" jdbcType="TINYINT"/>
+        <result property="amount" column="amount" jdbcType="DECIMAL"/>
+        <result property="refund" column="refund" jdbcType="DECIMAL"/>
+        <result property="isRefund" column="is_refund" jdbcType="VARCHAR"/>
+        <result property="memberId" column="member_id" jdbcType="BIGINT"/>
+        <result property="projectId" column="project_id" jdbcType="BIGINT"/>
+        <result property="elderId" column="elder_id" jdbcType="BIGINT"/>
+        <result property="estimatedArrivalTime" column="estimated_arrival_time" jdbcType="TIMESTAMP"/>
+        <result property="mark" column="mark" jdbcType="VARCHAR"/>
+        <result property="reason" column="reason" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="createBy" column="create_by" jdbcType="BIGINT"/>
+        <result property="updateBy" column="update_by" jdbcType="BIGINT"/>
+        <result property="remark" column="remark" jdbcType="VARCHAR"/>
+        <result property="viewStatus" column="view_status" jdbcType="VARCHAR"/>
+        <result property="orderNo" column="order_no" jdbcType="VARCHAR"/>
+        <result property="oCreateType" column="o_create_type" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,trading_order_no,payment_status,
+        amount,refund,is_refund,
+        member_id,project_id,elder_id,
+        estimated_arrival_time,mark,reason,
+        status,create_time,update_time,
+        create_by,update_by,remark,
+        view_status,order_no,o_create_type
+    </sql>
+</mapper>
+

@@ -1,0 +1,76 @@
+# ===================================
+# IDE & Editor files
+# ===================================
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+.factorypath
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ===================================
+# Trae IDE (local IDE)
+# ===================================
+Trae-cn/
+
+# ===================================
+# Build output
+# ===================================
+target/
+build/
+out/
+*.class
+*.jar
+*.war
+
+# ===================================
+# Redis binaries (local dev tools)
+# ===================================
+redius/
+
+# ===================================
+# Logs
+# ===================================
+logs/
+*.log
+
+# ===================================
+# Maven
+# ===================================
+.mvn/
+mvnw
+mvnw.cmd
+
+# ===================================
+# Gradle
+# ===================================
+.gradle/
+gradlew
+gradlew.bat
+
+# ===================================
+# Environment & secrets
+# ===================================
+.env
+.env.local
+.env.*.local
+application-local.yml
+application-local.properties
+*.key
+*.pem
+
+# ===================================
+# Claude Code local settings
+# ===================================
+**/settings.local.json
+
+# ===================================
+# OS generated files
+# ===================================
+Desktop.ini

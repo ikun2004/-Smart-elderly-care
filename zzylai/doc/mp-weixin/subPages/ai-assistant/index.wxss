@@ -1,0 +1,248 @@
+
+/* 整体容器 */
+.ai-assistant-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* 顶部导航栏 */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  position: relative;
+  height: 44px;
+}
+
+.back-btn {
+  position: absolute;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-icon {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.title {
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* 聊天内容区域 */
+.chat-content {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.chat-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-item {
+  display: flex;
+  margin-bottom: 16px;
+  max-width: 80%;
+}
+
+.ai-message {
+  align-self: flex-start;
+}
+
+.user-message {
+  align-self: flex-end;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.ai-avatar {
+  background-color: #0bbd87;
+  margin-right: 8px;
+}
+
+.user-avatar {
+  background-color: #52c41a;
+  margin-left: 8px;
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+  max-width: calc(100% - 44px);
+}
+
+.message-bubble {
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-size: 15px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.ai-bubble {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-top-left-radius: 2px;
+}
+
+.user-bubble {
+  background-color: #0bbd87;
+  color: #ffffff;
+  border-top-right-radius: 2px;
+}
+
+/* 消息时间戳 */
+.message-time {
+  font-size: 12px;
+  color: #999;
+  margin-top: 4px;
+}
+
+.ai-message .message-time {
+  margin-left: 4px;
+}
+
+.user-message .message-time {
+  margin-right: 4px;
+  text-align: right;
+}
+
+/* 思考状态样式 */
+.thinking {
+  background-color: #f9f9f9;
+  border: 1px dashed #e0e0e0;
+  animation: thinking-pulse 1.5s infinite;
+}
+
+@keyframes thinking-pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/* 预订信息区域 */
+.reservation-area {
+  background-color: #ffffff;
+  padding: 12px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.reservation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.reservation-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.reservation-room {
+  font-weight: 500;
+  color: #333;
+}
+
+.reservation-date {
+  color: #666;
+}
+
+.reservation-status {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.reservation-status.confirmed {
+  background-color: #e6f7ff;
+  color: #1890ff;
+}
+
+.reservation-status.pending {
+  background-color: #fff7e6;
+  color: #fa8c16;
+}
+
+/* 底部输入区域 */
+.input-area {
+  display: flex;
+  padding: 10px;
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+}
+
+.message-input {
+  flex: 1;
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 18px;
+  background-color: #f5f5f5;
+  font-size: 15px;
+}
+
+.send-btn {
+  width: 60px;
+  height: 36px;
+  margin-left: 8px;
+  background-color: #0bbd87;
+  color: #ffffff;
+  font-size: 15px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.send-btn[disabled] {
+  background-color: #d9d9d9;
+  color: #ffffff;
+}
+
+/* 蓝色按钮样式 - 用于family/index.wxml中的专属客服助理按钮 */
+.blue-bt {
+  background-color: #0bbd87 !important;
+  color: #ffffff !important;
+  margin-top: 10px;
+}

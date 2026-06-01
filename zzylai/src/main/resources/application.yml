@@ -1,0 +1,51 @@
+server:
+  port: 9995
+  servlet:
+    context-path: /
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/zzylai?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: your-db-username
+    password: your-db-password  #数据库密码
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+  ai:
+      dashscope:
+        api-key: your-dashscope-api-key
+        chat:
+          options:
+            model: qwen-max
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-aliases-package: cn.yangeit.pojo #扫描的的实体类包
+  global-config:
+    db-config:
+      logic-delete-field: isDeleted # 逻辑删除字段名
+      id-type: auto # 主键生成策略
+aliyun:
+  # 阿里云OSS的地址
+  endpoint: https://oss-cn-wuhan-lr.aliyuncs.com
+  # 访问key
+  accessKeyId: your-aliyun-access-key-id
+  # 秘钥
+  accessKeySecret: your-aliyun-access-key-secret
+  # 桶的名字
+  bucketName: qcxyai
+# 华为云相关
+huaweicloud:
+  #IOT相关配置
+  ak: your-huaweicloud-ak  # 鼠标悬停右上角账户名 -> 我的凭证 -> 访问秘钥
+  sk: your-huaweicloud-sk   # 鼠标悬停右上角账户名 -> 我的凭证 -> 访问秘钥
+  projectId: your-huaweicloud-project-id   # # 鼠标悬停右上角账户名 -> 我的凭证 -> API凭证 -> 所属区域对应的项目ID
+  regionId: cn-north-4      #如果是上海一，请填写"cn-east-3"；如果是北京四，请填写"cn-north-4";
+  endpoint: 7514feb935.st1.iotda-app.cn-north-4.myhuaweicloud.com # IOT控制台 -> 总览 -> 接入信息 -> 应用接入 -> HTTPS (443) -> 接入地址
+  #amqp相关配置
+  host: 7514feb935.st1.iotda-app.cn-north-4.myhuaweicloud.com # IOT控制台 -> 总览 -> 接入信息 -> 应用接入 -> AMQPS (5671) -> 接入地址
+  accessKey: your-amqp-access-key   # IOT控制台 -> 总览 -> 接入信息 -> 应用接入 -> AMQPS (5671) ->  拖到右侧：访问控制对应的 凭证KEY
+  accessCode: your-amqp-access-code # IOT控制台 -> 总览 -> 接入信息 -> 应用接入 -> AMQPS (5671) ->  拖到右侧：访问控制对应的 凭证CODE
+  queueName: DefaultQueue #默认，无需改动
