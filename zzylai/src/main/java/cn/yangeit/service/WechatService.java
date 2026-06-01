@@ -18,8 +18,8 @@ public class WechatService {
     // 获取手机号
     private static final String PHONE_REQUEST_URL = "https://api.weixin.qq.com/wxa/business/getuserphonenumber";
 
-    private String appId = "wx56f970623887f89a"; // 请替换为实际appid
-    private String appSecret = "6d2d8afc48f168e47419a85979805edb"; // 请替换为实际appsecret
+    private String appId = "your-wechat-appid"; // 请替换为实际appid
+    private String appSecret = "your-wechat-appsecret"; // 请替换为实际appsecret
 
     /**
      * 获取openid
